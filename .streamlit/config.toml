@@ -1,1 +1,3 @@
-
+[theme]
+base = "light"
+primaryColor = "#E35336"
