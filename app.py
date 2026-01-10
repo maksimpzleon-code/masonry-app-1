@@ -195,7 +195,30 @@ def geometric_characteristics():
 
 # ------------------ Основная функция ------------------
 def main():
-    st.markdown('<style>.katex{font-size:1.1em!important;}</style>', unsafe_allow_html=True)
+    st.markdown(
+        """
+        <style>
+        /* Подключение Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+        /* Формулы KaTeX */
+        .katex { font-size: 1.1em !important; }        
+
+        /* Заголовки — Inter */
+        h1, h2, h3, h4, h5, h6, .stTitle, .stHeader, .stSubheader {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        /* Размеры заголовков */
+        h1, .stTitle { font-size: 2.25em !important; }
+        h2, .stHeader { font-size: 1.75em !important; }
+        h3, .stSubheader { font-size: 1.5em !important; }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.link_button("Вернуться к списку приложений", url="https://google.com", icon="🏃")
     st.title("Косое внецентренное сжатие каменных сечений")
 
     init_session_state()
@@ -203,9 +226,10 @@ def main():
     section_dimensions()
     st.divider()
     internal_forces()
-    st.divider()
     geometric_characteristics()
+    st.divider()
     st.subheader("Расчет прочности в разработке")
 
 if __name__ == "__main__":
     main()
+
