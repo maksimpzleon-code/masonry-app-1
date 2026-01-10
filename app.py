@@ -218,7 +218,7 @@ def main():
         unsafe_allow_html=True
     )
 
-    st.link_button("Вернуться к списку приложений", url="https://google.com", icon="🏃")
+    st.link_button("Вернуться к списку приложений", url="https://maksimlpozdeev.github.io/apps/", icon="🏃")
     st.title("Косое внецентренное сжатие каменных сечений")
 
     init_session_state()
@@ -232,4 +232,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
